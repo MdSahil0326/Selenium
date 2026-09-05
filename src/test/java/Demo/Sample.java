@@ -7,8 +7,9 @@ public class Sample {
 
 	public static void main(String[] args) {
 	WebDriver driver = new ChromeDriver();	
-    //ChromeDriver drive = new ChromeDriver();
-    //drive.get("https://www.youtube.com/");
+    ChromeDriver drive = new ChromeDriver();
+    driver.get(null);
+    drive.get("https://www.youtube.com/");
 	
     
 	}
