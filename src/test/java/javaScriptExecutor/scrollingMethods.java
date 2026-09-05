@@ -2,8 +2,10 @@ package javaScriptExecutor;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class scrollingMethods {
@@ -15,7 +17,8 @@ public class scrollingMethods {
 		
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		//scrollTo is scrollto the position from the Default POSI (0,0)
+		
+		//scrollTo is scroll to the position from the Default POSI (0,0)
 		 js.executeScript("window.scrollTo(0,500)");
 		 
 		 
@@ -23,8 +26,17 @@ public class scrollingMethods {
 		 //scrollBy it will scroll from the current position 
 		 js.executeScript("window.scrollBy(0,1000)");
 		 
+		// Scroll down by 500px
+//		 js.executeScript("window.scrollBy(0, 500);");
+
+		 // Scroll to top
+//		 js.executeScript("window.scrollTo(0, 0);");
 		 
-		 js.executeScript("window.scrollIntoView()");
+		 
+		 Thread.sleep(3000);
+		 //scrollIntoView(true) goes to the element  
+		 WebElement element = driver.findElement(By.id("monthDropdown"));
+		 js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
 	}
 
 }
