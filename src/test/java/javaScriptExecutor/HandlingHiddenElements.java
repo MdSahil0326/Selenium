@@ -24,9 +24,8 @@ public class HandlingHiddenElements {
 		visible in HTML DOM */
 		
 		
-	
+	}
 		
 	
 
-}
 }
