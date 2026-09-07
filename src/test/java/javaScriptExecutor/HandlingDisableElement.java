@@ -20,6 +20,7 @@ public class HandlingDisableElement {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].value=arguments[1]",untf,"Selenium");
 		js.executeScript("arguments[0].value=arguments[1]",pwtf,"12345");
+		
 	}
 
 }
