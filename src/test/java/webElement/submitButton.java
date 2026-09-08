@@ -20,7 +20,18 @@ public class submitButton {
 //		Thread.sleep(2000);
 //		stf.submit();
 		Thread.sleep(2000);
-		System.out.println(driver.findElement(By.className("ico-login")).getText());
+		//gettext web element 
+		//String tf = driver.findElement(By.className("ico-login")).getText();
+		//System.out.println(tf);
+		//tagname
+		WebElement tf=driver.findElement(By.className("ico-login"));
+		System.out.println(tf.getTagName());
+		
+		System.out.println(tf.getCssValue("color"));
+		
+		
+		
+		
 		
 		
 	}
